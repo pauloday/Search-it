@@ -1,0 +1,45 @@
+<script src="options.js"></script>
+
+<html>
+  <head><title>Google it options</title></head>
+
+  <style type="text/css">
+    #title
+    {
+    font-size:1.5em;
+    padding:5px;
+    }
+    #saved
+    {
+    color:grey;
+    }
+    #form
+    {
+    margin-left:10px;
+    }
+  </style>
+  
+  <body onload="load()">
+
+    <p id="title">
+      <b>
+        Set shortcut
+      </b>
+    </p>
+    <div id="form">
+      Google:
+      <input id="ginput" type="text" size="16" maxlength="16" readonly="readonly"></input>
+      <input type="button" id="gbutton"
+             onclick="buttonClick('ginput', 'gbutton')"
+             value="Click to detect"></input>
+      <br/>
+      Wolfram|Alpha:
+      <input id="winput" type="text" size="16" maxlength="16" readonly="readonly"></input>
+      <input type="button" id="wbutton"
+             onclick="buttonClick('winput', 'wbutton')"
+             value="Click to detect"></input>
+      <p id="saved">Settings saved</p>
+    </div>
+  </body>
+</html>
+

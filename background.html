@@ -1,0 +1,29 @@
+<html>
+  <script type="text/javascript">
+    settings = {
+    get gshortcut() {
+    return localStorage['gshortcut'];
+    },
+    set gshortcut(val) {
+    localStorage['gshortcut'] = val;
+    }
+    }
+    
+    if (settings.gshortcut == undefined)
+    {
+    settings.shortcut = "Ctrl+g";
+    }
+    if (settings.wshortcut == undefined)
+    {
+    settings.shortcut = "Ctrl+w";
+    }
+
+    chrome.extension.onRequest.addListener(
+    function(request, sender, sendResponse) {
+    if (request.shortcut == "whatis")
+    sendResponse({gshortcut: settings.gshortcut, wshortcut: settings.wshortcut});
+    else
+    sendResponse({}); // snub them.
+    });
+  </script>
+</html>
