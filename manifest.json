@@ -1,5 +1,5 @@
 {
-    "name": "Google it",
+    "name": "Search it",
     "version": "1.0",
     "description": "Adds a configurable keyboard shortcut to search highlighted text. Default is Ctrl+g for google, and Ctrl+w for Wolfram|Alpha",
     "content_scripts":
